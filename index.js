@@ -23,19 +23,10 @@ app.use( express.static(path.join(__dirname, "/public")));
 
 app.get("*", (req, res) => {
 
-       res.sendFile(path.join(__dirname, '/public', 'index.html'));
+       res.sendFile(path.join(__dirname, '/public', 'index.html')) || res.sendFile(path.join(__dirname, '/public'))
 
 })
-app.get("/login/Ads.txt", (req, res) => {
 
-       res.sendFile(path.join(__dirname, '/public', 'Ads.txt'));
-
-})
-app.get("/login/ads.txt", (req, res) => {
-
-       res.sendFile(path.join(__dirname, '/public', 'Ads.txt'));
-
-})
 
 app.listen(port, () => console.log("server running"));
 
