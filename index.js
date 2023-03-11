@@ -19,7 +19,7 @@ require("./routes/index.js")(app);
 const port = process.env.PORT || 3001;
 
 // app.use(express.static('../client/bulid'))
-app.use( express.static(path.join(__dirname, "/public")));
+//app.use( express.static(path.join(__dirname, "/public")));
 
 app.get("*", (req, res) => {
 
